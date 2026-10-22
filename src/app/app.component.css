@@ -1,0 +1,40 @@
+.panel {
+  width: 420px;
+  background: #fff;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.boton-leyenda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.recibido {
+  margin: 14px 0 0;
+  padding: 8px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  text-align: center;
+}
+
+app-habitacion {
+  display: block;
+  width: 420px;
+  box-sizing: border-box;
+  margin-top: 16px;
+  background: #fff7e6;
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 16px 20px;
+}

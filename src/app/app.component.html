@@ -1,0 +1,13 @@
+<div class="panel">
+  <h1>{{ title }}</h1>
+  <div class="boton-leyenda">
+    <button class="btn" (click)="onConectarDesconectar($event)">{{ corrienteVivienda ? 'Desconectar' : 'Conectar' }}</button>
+    <span class="leyenda" [class.on]="corrienteVivienda" [class.off]="!corrienteVivienda">Corriente vivienda: {{ this.corrienteVivienda ? 'CONECTADA' : 'DESCONECTADA' }}</span>
+  </div>
+  <div class="boton-leyenda">
+    <button class="btn" (click)="onConectarDesconectarHab($event)">{{ corrienteHabitacion ? 'Desconectar' : 'Conectar' }}</button>
+    <span class="leyenda" [class.on]="corrienteHabitacion" [class.off]="!corrienteHabitacion">Corriente habitación: {{ this.corrienteHabitacion ? 'CONECTADA' : 'DESCONECTADA' }}</span>
+  </div>
+  <p class="recibido">Estado recibido: PERSIANA {{ estadoPersianaRecibido ? 'ABIERTA' : 'CERRADA' }}</p>
+</div>
+<app-habitacion [corriente]="corrienteHabitacion" (estadoPersiana)="onEstadoPersiana($event)"></app-habitacion>

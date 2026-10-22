@@ -1,0 +1,22 @@
+.persiana {
+  text-align: center;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.estado {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #475569;
+  color: #fff;
+}
+
+.estado.subida {
+  background: #0ea5e9;
+}

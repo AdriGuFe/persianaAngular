@@ -1,0 +1,8 @@
+<div class="persiana">
+  <div class="controles">
+    <button class="btn" [disabled]="!corrienteHab()" (click)="subirBajarPersiana()">{{ estadoPersiana ? 'Bajar' : 'Subir' }}</button>
+  </div>
+  <div class="info">
+    <span class="estado" [class.subida]="estadoPersiana">Estado: {{this.estadoPersiana ? 'Subida' : 'Bajada'}}</span>
+  </div>
+</div>
