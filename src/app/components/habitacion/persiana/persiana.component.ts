@@ -7,14 +7,14 @@ import { Component, input, output } from '@angular/core';
   styleUrl: './persiana.component.css'
 })
 export class PersianaComponent {
-  estadoPersiana = false;
-  corrienteHab = input<boolean>(false);
-  estadoCambiado = output<boolean>();
+  estaSubida = false;
+  energiaDisponible = input<boolean>(false);
+  estadoActualizado = output<boolean>();
 
-  subirBajarPersiana() {
-    if (this.corrienteHab()) {
-      this.estadoPersiana = !this.estadoPersiana;
-      this.estadoCambiado.emit(this.estadoPersiana);
+  moverPersiana() {
+    if (this.energiaDisponible()) {
+      this.estaSubida = !this.estaSubida;
+      this.estadoActualizado.emit(this.estaSubida);
     }
   }
 }

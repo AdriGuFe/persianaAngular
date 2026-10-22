@@ -1,2 +1,2 @@
-<p class="corriente" [class.on]="corriente()" [class.off]="!corriente()">Corriente: {{ corriente() ? 'ON' : 'OFF' }}</p>
-<app-persiana [corrienteHab]="corriente()" (estadoCambiado)="onEstadoPersiana($event)"></app-persiana>
+<p class="estado-energia" [class.activo]="energia()" [class.inactivo]="!energia()">Suministro: {{ energia() ? 'ACTIVO' : 'CORTADO' }}</p>
+<app-persiana [energiaDisponible]="energia()" (estadoActualizado)="reenviarEstadoPersiana($event)"></app-persiana>

@@ -8,10 +8,10 @@ import { PersianaComponent } from "./persiana/persiana.component";
   styleUrl: './habitacion.component.css'
 })
 export class HabitacionComponent {
-  corriente = input<boolean>(false);
-  estadoPersiana = output<boolean>();
+  energia = input<boolean>(false);
+  cambioPersiana = output<boolean>();
 
-  onEstadoPersiana (estado: boolean) {
-    this.estadoPersiana.emit(estado);
+  reenviarEstadoPersiana (abierta: boolean) {
+    this.cambioPersiana.emit(abierta);
   }
 }

@@ -1,12 +1,13 @@
-.corriente {
-  margin: 0 0 12px;
-  text-align: center;
+.estado-energia {
+  display: inline-block;
+  margin: 8px 0 18px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 app-persiana {
   display: block;
-  background: #e0f2fe;
-  border: 2px solid #38bdf8;
-  border-radius: 10px;
-  padding: 14px;
+  background: #fff;
+  border: 3px solid #111;
+  padding: 18px;
 }

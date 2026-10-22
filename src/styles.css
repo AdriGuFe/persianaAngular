@@ -1,40 +1,69 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #eef1f5;
-  color: #222;
+  font-family: "Courier New", ui-monospace, Consolas, monospace;
+  background-color: #fff4d6;
+  background-image: radial-gradient(#e8c66a 1.2px, transparent 1.2px);
+  background-size: 18px 18px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #111;
   margin: 0;
-  padding: 24px;
+  padding: 48px 20px;
+}
+
+app-root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.btn {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #2563eb;
-  color: #fff;
-  font-size: 14px;
+.boton {
+  padding: 10px 20px;
+  border: 3px solid #111;
+  border-radius: 0;
+  background: #ff5da2;
+  color: #111;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 4px 4px 0 #111;
+  transition: transform 0.08s, box-shadow 0.08s;
 }
 
-.btn:hover:not(:disabled) {
-  background: #1d4ed8;
+.boton:hover:not(:disabled) {
+  background: #ffd23f;
 }
 
-.btn:disabled {
-  background: #b8c0cc;
+.boton:active:not(:disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #111;
+}
+
+.boton:disabled {
+  background: repeating-linear-gradient(45deg, #ddd, #ddd 6px, #c4c4c4 6px, #c4c4c4 12px);
+  color: #777;
+  box-shadow: none;
   cursor: not-allowed;
 }
 
-.on {
-  color: #15803d;
-  font-weight: bold;
+.activo {
+  background: #3dd68c;
+  color: #111;
+  padding: 2px 6px;
+  border: 2px solid #111;
+  font-weight: 700;
 }
 
-.off {
-  color: #b91c1c;
-  font-weight: bold;
+.inactivo {
+  background: #111;
+  color: #fff4d6;
+  padding: 2px 6px;
+  border: 2px solid #111;
+  font-weight: 700;
 }

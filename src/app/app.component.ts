@@ -9,27 +9,27 @@ import { HabitacionComponent } from "./components/habitacion/habitacion.componen
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'persianaAngular';
-  corrienteVivienda = false;
-  corrienteHabitacion = false;
-  estadoPersianaRecibido = false;
+  titulo = 'Control de persianas';
+  suministroCasa = false;
+  suministroDormitorio = false;
+  persianaAbiertaRecibida = false;
 
-  onConectarDesconectar(event: Event) {
-    this.corrienteVivienda = !this.corrienteVivienda;
+  alternarSuministroCasa(event: Event) {
+    this.suministroCasa = !this.suministroCasa;
 
-    if (!this.corrienteVivienda) {
-      this.corrienteHabitacion = false;
+    if (!this.suministroCasa) {
+      this.suministroDormitorio = false;
     }
   }
 
-  onConectarDesconectarHab(event: Event) {
+  alternarSuministroDormitorio(event: Event) {
 
-    if (this.corrienteVivienda) {
-      this.corrienteHabitacion = !this.corrienteHabitacion;
+    if (this.suministroCasa) {
+      this.suministroDormitorio = !this.suministroDormitorio;
     }
   }
 
-  onEstadoPersiana(estado: boolean) {
-    this.estadoPersianaRecibido = estado;
+  recibirEstadoPersiana(abierta: boolean) {
+    this.persianaAbiertaRecibida = abierta;
   }
 }

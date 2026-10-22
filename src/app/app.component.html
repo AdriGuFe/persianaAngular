@@ -1,13 +1,13 @@
-<div class="panel">
-  <h1>{{ title }}</h1>
-  <div class="boton-leyenda">
-    <button class="btn" (click)="onConectarDesconectar($event)">{{ corrienteVivienda ? 'Desconectar' : 'Conectar' }}</button>
-    <span class="leyenda" [class.on]="corrienteVivienda" [class.off]="!corrienteVivienda">Corriente vivienda: {{ this.corrienteVivienda ? 'CONECTADA' : 'DESCONECTADA' }}</span>
+<div class="tablero">
+  <h1>{{ titulo }}</h1>
+  <div class="fila-control">
+    <button class="boton" (click)="alternarSuministroCasa($event)">{{ suministroCasa ? 'Apagar' : 'Encender' }}</button>
+    <span class="indicador" [class.activo]="suministroCasa" [class.inactivo]="!suministroCasa">Luz de la casa: {{ this.suministroCasa ? 'ENCENDIDA' : 'APAGADA' }}</span>
   </div>
-  <div class="boton-leyenda">
-    <button class="btn" (click)="onConectarDesconectarHab($event)">{{ corrienteHabitacion ? 'Desconectar' : 'Conectar' }}</button>
-    <span class="leyenda" [class.on]="corrienteHabitacion" [class.off]="!corrienteHabitacion">Corriente habitación: {{ this.corrienteHabitacion ? 'CONECTADA' : 'DESCONECTADA' }}</span>
+  <div class="fila-control">
+    <button class="boton" (click)="alternarSuministroDormitorio($event)">{{ suministroDormitorio ? 'Apagar' : 'Encender' }}</button>
+    <span class="indicador" [class.activo]="suministroDormitorio" [class.inactivo]="!suministroDormitorio">Luz del dormitorio: {{ this.suministroDormitorio ? 'ENCENDIDA' : 'APAGADA' }}</span>
   </div>
-  <p class="recibido">Estado recibido: PERSIANA {{ estadoPersianaRecibido ? 'ABIERTA' : 'CERRADA' }}</p>
+  <p class="aviso-estado">Última señal: persiana {{ persianaAbiertaRecibida ? 'ABIERTA' : 'CERRADA' }}</p>
 </div>
-<app-habitacion [corriente]="corrienteHabitacion" (estadoPersiana)="onEstadoPersiana($event)"></app-habitacion>
+<app-habitacion [energia]="suministroDormitorio" (cambioPersiana)="recibirEstadoPersiana($event)"></app-habitacion>
