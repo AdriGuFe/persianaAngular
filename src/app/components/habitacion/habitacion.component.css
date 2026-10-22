@@ -1,13 +1,12 @@
 .estado-energia {
-  display: inline-block;
-  margin: 8px 0 18px;
-  font-size: 14px;
-  text-transform: uppercase;
+  margin: 0 0 16px;
+  font-weight: bold;
 }
 
 app-persiana {
   display: block;
   background: #fff;
-  border: 3px solid #111;
-  padding: 18px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 16px;
 }
